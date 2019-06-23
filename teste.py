@@ -1,34 +1,12 @@
 arq = open('sales.csv', 'r')
-dicio_dev = {}
-quant = 0
-i = 0
+dicio = {}
+k = 0
 for linha in arq:
     dev = linha.split(',')
-    valor[]
-        if dev not in dicio_dev:
-            quant += 1
-            dicio_dev[dev[14]] = quant
-        elif dev  in dicio_dev:
-            dicio_dev[dev[14]] 
-            quant += 1
-            dicio_dev[dev[14]] = quant
-
-
-
-
-
-
+    if dev[14] not in dicio:
+        dicio[dev[14]] = 1
+    else:
+        dicio[dev[14]] = dicio.setdefault(dev[14], 0) + 1
     
-    for e in dicio_dev:
-        if dev not in dicio_dev:
-            quant += 1
-            dicio_dev[dev[14]] = quant
-        elif dev  in dicio_dev:
-            dicio_dev[dev[14]] 
-            quant += 1
-            dicio_dev[dev[14]] = quant
-
-        
-    
+    print (dicio)
 arq.close()
-print(dicio_dev)
